@@ -46,8 +46,64 @@ a {
 
 .header {
     grid-area: header;
+    display: flex;
+    align-items: center;
+    height: $header-height;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    column-gap: 18px;
+    margin-right: auto;
+
+    .search {
+        font-size: 1.8rem;
+        font-weight: 600;
+        background: #fff;
+
+        &::placeholder {
+            color: rgba($color: #000, $alpha: 0.2);
+        }
+    }
 }
 
 .main {
     grid-area: main;
+}
+
+.header .nav {
+    display: flex;
+    column-gap: 46px;
+}
+
+.header .nav-link {
+    position: relative;
+    padding: 8px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $text-color;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: $black;
+        transition: width 0.5s;
+    }
+
+    &:hover::after,
+    &.active::after {
+        width: 100%;
+    }
+}
+
+.header .actions {
+    display: flex;
+    align-items: center;
+    column-gap: 26px;
+    margin-left: 50px;
 }

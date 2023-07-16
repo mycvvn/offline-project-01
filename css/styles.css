@@ -172,10 +172,61 @@ a {
 
 .header {
   grid-area: header;
+  display: flex;
+  align-items: center;
+  height: 128px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  column-gap: 18px;
+  margin-right: auto;
+}
+.search-form .search {
+  font-size: 1.8rem;
+  font-weight: 600;
+  background: #fff;
+}
+.search-form .search::placeholder {
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .main {
   grid-area: main;
+}
+
+.header .nav {
+  display: flex;
+  column-gap: 46px;
+}
+
+.header .nav-link {
+  position: relative;
+  padding: 8px 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000;
+}
+.header .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #000;
+  transition: width 0.5s;
+}
+.header .nav-link:hover::after, .header .nav-link.active::after {
+  width: 100%;
+}
+
+.header .actions {
+  display: flex;
+  align-items: center;
+  column-gap: 26px;
+  margin-left: 50px;
 }
 
 /*# sourceMappingURL=styles.css.map */
