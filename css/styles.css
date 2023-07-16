@@ -168,6 +168,37 @@ a {
 
 .sidebar {
   grid-area: sidebar;
+  padding: 54px 0 0 58px;
+}
+.sidebar .heading {
+  margin-top: 60px;
+  font-size: 3.2rem;
+  font-weight: 800;
+}
+.sidebar .nav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  margin-top: 48px;
+}
+.sidebar .nav .icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+.sidebar .nav-item {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 6px;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #000;
+  transition: background-color 0.5s;
+}
+.sidebar .nav-item:hover {
+  background: #ebebeb;
 }
 
 .header {
